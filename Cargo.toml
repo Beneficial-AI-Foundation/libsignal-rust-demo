@@ -16,8 +16,12 @@ path = "src/basic_session_keys_signed.rs"
 name = "basic_session_x3dh"
 path = "src/basic_session_x3dh.rs"
 
+[[bin]]
+name = "sealed_sender_demo"
+path = "src/sealed_sender_demo.rs"
+
 [dependencies]
-libsignal-protocol = { path = "/home/ec2-user/libsignal/rust/protocol" }
+libsignal-protocol = { git = "https://github.com/signalapp/libsignal" }
 futures = "0.3"
 uuid = "1"
 rand = "0.9"
@@ -25,6 +29,8 @@ rand = "0.9"
 hex = "0.4"
 # Environment logger for debugging
 env_logger = "0.11"
+# Async runtime for sealed sender demo
+tokio = { version = "1", features = ["full"] }
 
 # Logging framework
 log = "0.4"
