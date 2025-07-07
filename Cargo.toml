@@ -12,6 +12,10 @@ path = "src/basic_session_keys.rs"
 name = "basic_session_keys_signed"
 path = "src/basic_session_keys_signed.rs"
 
+[[bin]]
+name = "basic_session_x3dh"
+path = "src/basic_session_x3dh.rs"
+
 [dependencies]
 libsignal-protocol = { path = "/home/lacra/git_repos/clean/libsignal/rust/protocol" }
 futures = "0.3"
