@@ -1,0 +1,34 @@
+[package]
+name = "libsignal-demo-sergiu"
+version = "0.1.0"
+edition = "2021"
+
+# Multiple binaries for different examples
+[[bin]]
+name = "basic_session_keys"
+path = "src/basic_session_keys.rs"
+
+[[bin]]
+name = "basic_session_keys_signed"
+path = "src/basic_session_keys_signed.rs"
+
+[dependencies]
+libsignal-protocol = { path = "/home/lacra/git_repos/clean/libsignal/rust/protocol" }
+futures = "0.3"
+uuid = "1"
+rand = "0.9"
+# Hex encoding for displaying keys
+hex = "0.4"
+# Environment logger for debugging
+env_logger = "0.11"
+
+# Logging framework
+log = "0.4"
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+debug = false
