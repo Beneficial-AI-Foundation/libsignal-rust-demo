@@ -17,7 +17,7 @@ name = "basic_session_x3dh"
 path = "src/basic_session_x3dh.rs"
 
 [dependencies]
-libsignal-protocol = { path = "/home/lacra/git_repos/clean/libsignal/rust/protocol" }
+libsignal-protocol = { path = "/home/ec2-user/libsignal/rust/protocol" }
 futures = "0.3"
 uuid = "1"
 rand = "0.9"
